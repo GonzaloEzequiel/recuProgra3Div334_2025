@@ -149,7 +149,7 @@ function mostrarCarrito() {
         //agrego al DOM la lista de productos dentro del carrito
         seccionCarrito.appendChild(listaProductos);
         //y modifico el precio total en pantalla empleando el método reduce, que suma el precio de cada elemento y devuelve el total acumulado (dejando los dos decimales heredados)
-        precioTotal.textContent = `$${carrito.reduce((totalAcumulado, prod) => totalAcumulado += Number(prod.precio), 0).toFixed(2)}`;
+        precioTotal.textContent = `$${carrito.reduce((totalAcumulado, prod) => totalAcumulado += Number(prod.precio)*prod.cantidad, 0).toFixed(2)}`;
     } 
     //si el carrito está vacío
     else {
