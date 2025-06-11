@@ -277,7 +277,7 @@ botonera.appendChild(btnOrdenarPrecioDesc);
 //  para los de orden alfabético: comparo los atributos nombre de cada elemento con el sucesor y los reordena
 //  para los de orden numérico: comparo los atributos precio de elemento con el sucesor tomando la diferencia
 btnOrdenarNombreAsc.addEventListener("click", () => { filtrarProductos(frutas.sort((a, b) => a.nombre > b.nombre ? 1 : -1 )); });
-btnOrdenarNombreDesc.addEventListener("click", () => { filtrarProductos(frutas.sort((a, b) => a.nombre < b.nombre ? -1 : 1 )); });
+btnOrdenarNombreDesc.addEventListener("click", () => { filtrarProductos(frutas.sort((a, b) => a.nombre < b.nombre ? 1 : -1 )); });
 btnOrdenarPrecioAsc.addEventListener("click", () => { filtrarProductos(frutas.sort((a, b) => a.precio - b.precio )); });
 btnOrdenarPrecioDesc.addEventListener("click", () => { filtrarProductos(frutas.sort((a, b) => b.precio - a.precio )); });
 
