@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recuperatorio Parcial I</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/main.js"></script>
 </head>
 
 <body>
@@ -15,7 +17,8 @@
             <div class="logo">Frutería</div>
         </a>
         
-        <div class="nombreAlumno"></div>
+        <!-- recibo class="nombreAlumno" y lo cambio a class="nombre-alumno" de modo que se unifique el estilo-->
+        <div class="nombre-alumno"></div>
         
         <input type="text" placeholder="Buscar..." class="barra-busqueda">
         
@@ -29,6 +32,7 @@
     <main>
     <section class="seccion-productos">
         <h2>Nuestras frutas</h2>
+        <div id="botonera"></div>   <!-- Este elemento lo agregué, de modo que los botones me queden "arriba" de las tarjetas -->
         <div class="contenedor-productos"></div>
     </section>
 

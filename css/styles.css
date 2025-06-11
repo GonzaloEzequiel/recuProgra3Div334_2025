@@ -12,8 +12,11 @@ h2 {
 }
 
 header {
-
+  display: flex;
+  justify-content: space-between;
+  background-color: #218838;
   padding: 10px 20px;
+  color: white;
 }
 
 header > a {
@@ -42,57 +45,160 @@ header > a {
 }
 
 
-
 /* Seccion productos */
+/* Estos son los botones solicitados en el enunciado #8
+  se estilaron de forma tal que respete el formato de la imagen de muestra
+ */
+#botonera {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#botonera button {
+  margin: 0 15px;
+  background-color: #218838;
+  border-radius: 5px;
+  color: white;
+  border-style: none;
+  height: 30px;
+  width: 200px;
+}
+#botonera button:hover {
+  cursor: pointer;
+}
+#botonera button:focus {
+  animation: clickeame 4s ease-in-out;
+}
+
 .seccion-productos {
   padding: 20px;
 }
 
+.contenedor-productos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .card-producto {
   border: 1px solid #ccc;
-
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  width: 200px;
+  height: 300px;
+  padding: 0px;
+  margin: 10px 10px;
 }
 
 .card-producto img {
-  width: 130px;
+  width: 100px;
+  height: 100px;
   border-radius: 5px;
-  height: 115px;
+  margin: auto auto;
 }
 
 .card-producto h3 {
   font-size: 1.2rem;
   margin: 10px 0;
+  text-align: center;
+  font-weight: bolder;
 }
 
 .card-producto p {
   font-size: 1rem;
   color: #333;
+  text-align: center;
 }
 
-.card-producto button:hover {
+.card-producto button {
   background-color: #218838;
+  border-radius: 5px;
+  height: 10%;
+  width: 60%;
+  margin: auto auto;
+  color: white;
+  border-style: none;
+}
+.card-producto button:hover {
+  cursor: pointer;
+}
+.card-producto button:focus {
+  animation: clickeame 4s ease-in-out;
 }
 
-
+/* EXPERIMENTAL */
+@keyframes clickeame {
+  0% {
+    background-color: lightgreen
+  }
+  25% {
+    background-color: gold;
+  }
+  50% {
+    background-color: greenyellow;
+  }
+  100% {
+    background-color:#218838;
+  }
+} 
+/*  EXPERIMENTAL */
 
 /* Seccion carrito */
 .seccion-carrito {
   padding: 20px;
   background-color: #f8f9fa;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #ccc;  
 }
 
 #items-carrito {
   padding: 10px 0;
   list-style-type: none;
 }
+#items-carrito p {
+  text-align: center;
+}
+#items-carrito .cant {
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+}
+#items-carrito #mas {
+  background-color: #218838;
+}
+
+.carrito-img {
+  display: block;
+  margin: 0 auto;
+}
+
+li {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 45%;
+}
+li span {  
+  margin: 0 50px;
+}
 
 .nombre-item, .info-carrito {
   font-size: 20px;
 }
 
-.boton-eliminar {
+/* El botón vaciar carrito solicitado en el enunciado #9
+  se suma a esta regla de estilo para mantener el formato de la imagen de muestra
+*/
+.boton-eliminar, .seccion-carrito button {
   cursor: pointer;
+  background-color: red;
+  border-radius: 5px;
+  height: 35px;
+  width: 100px;
+  color: white;
+  border-style: none;
 }
 
 .hidden {
